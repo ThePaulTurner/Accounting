@@ -1,0 +1,65 @@
+#include  <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+using namespace ReadATextFile;
+using System;
+using System.IO;
+
+// The purpose of this program is to create an Accounting applications
+
+int main ()
+{
+// stream files
+ifstream inFile;
+ofstream outFile;
+
+//open files
+inFile.open (inData.txt);
+outFile.open (outData.txt);
+
+//variables
+string firstName;
+string lastName;
+string department;
+double monthlyGrossSalary;
+int monthlyBonus;
+int taxes;
+double paycheck;
+double distanceTraveled;
+double travelingTime;
+double averageSpeed = distanceTraveled/travelingTime;
+int numberOfCoffeeCupsSold;
+double cost;
+double salesAmount = numberOfCoffeeCupsSold/cost;
+
+
+
+// first line
+cout << '"First Name:  " + "Last Name:  " + "Department: " ';
+cin >> firstName >> lastName >> department;
+cout << endl;
+
+// second line
+cout << ' "Monthly Gross Salary: " + "the Bonus: "' ;
+cin >> monthlyGrossSalary >> monthlyBonus;
+cout << endl;
+
+// third line
+cout << ' "Distance Traveled:  " + "Traveling Time: " ';
+cin >>
+cout << endl;
+
+//fourth line
+cout << ' "Number of Coffee Cups Sold: " + "Cost:  " ';
+cin >> numberOfCoffeeCupsSold, cost;
+cout << endl;
+
+   inFile.close (inData.txt);
+   outFile.close(outData.txt);
+   cin.get ();
+
+  return 0;
+}
