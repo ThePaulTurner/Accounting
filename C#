@@ -1,65 +1,62 @@
-#include  <iostream>
-#include <fstream>
-#include <string>
-#include <iomanip>
+#include  <iostream> // input file stream
+#include <fstream> // file stream
+#include <string> //  to avoid typing std::string 
+#include <iomanip> // the  Input/output library of the C++ standard library
+using namespace std; // cin and cout are defined witin this namespace
 
-using namespace std;
-using namespace ReadATextFile;
-using System;
-using System.IO;
 
 // The purpose of this program is to create an Accounting applications
 
-int main ()
+int main () //initiates the declaration of a function
 {
-// stream files
-ifstream inFile;
-ofstream outFile;
+
+ifstream inFile; //
+ofstream outFile; //
 
 //open files
-inFile.open (inData.txt);
-outFile.open (outData.txt);
+inFile.open ("inData.txt"); // represents the infput file stream; reads information.
+outFile.open ("outData.txt"); // represents the output file stream; creates files
 
 //variables
-string firstName;
-string lastName;
-string department;
-double monthlyGrossSalary;
-int monthlyBonus;
-int taxes;
-double paycheck;
-double distanceTraveled;
-double travelingTime;
-double averageSpeed = distanceTraveled/travelingTime;
-int numberOfCoffeeCupsSold;
-double cost;
-double salesAmount = numberOfCoffeeCupsSold/cost;
+string firstName; // variable for the first name entered
+string lastName; // variable for the last name entered
+string department; // variable for the department entered
+double monthlyGrossSalary; // double variable for the employee monthly gross salary
+int monthlyBonus; // variable receiving the monthly bonus
+double taxes; // variable receiving the tax amount
+double paycheck; // variable receiving the paycheck
+double distanceTraveled; // variable receiving the distance traveled
+double travelingTime; // variable receiving the time traveled
+double averageSpeed = distanceTraveled/travelingTime; // variable receiving the average of distance traveled and travelig time
+double cost; // variable receiving the cost of coffee cups
+int numberOfCoffeeCupsSold; 
+double salesAmount = numberOfCoffeeCupsSold/cost; // variable receiving the average of numberOfCoffeeCupsSold divided by costcost
 
 
 
 // first line
-cout << '"First Name:  " + "Last Name:  " + "Department: " ';
-cin >> firstName >> lastName >> department;
-cout << endl;
+
+inFile >>firstName >> lastName >> department; 
+outFile <<  "First Name:" << "Last Name:" << "Department:" << endl; 
+
 
 // second line
-cout << ' "Monthly Gross Salary: " + "the Bonus: "' ;
-cin >> monthlyGrossSalary >> monthlyBonus;
-cout << endl;
+inFile >> monthlyGrossSalary >> monthlyBonus; 
+outFile << "Monthly Gross Salary:" << "the Bonus:" << endl;
+
 
 // third line
-cout << ' "Distance Traveled:  " + "Traveling Time: " ';
-cin >>
-cout << endl;
+inFile >> distanceTraveled >> travelingTime;//
+outFile << "Distance Traveled:" << "Traveling Time: " << endl; //
+
 
 //fourth line
-cout << ' "Number of Coffee Cups Sold: " + "Cost:  " ';
-cin >> numberOfCoffeeCupsSold, cost;
-cout << endl;
+inFile >> numberOfCoffeeCupsSold >> cost; //
+outFile << "Number of Coffee Cups Sold:" << "Cost: " << endl; //
 
-   inFile.close (inData.txt);
-   outFile.close(outData.txt);
-   cin.get ();
+   inFile.close (); // 
+   outFile.close(); //
 
-  return 0;
+  return 0; //
+
 }
